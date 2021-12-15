@@ -1,0 +1,30 @@
+{
+  "name": "provisioner-simple-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS=true ./node_modules/ts-node/dist/bin.js index.ts",
+    "destroy-all": "npm start -- services destroy && npm start -- clusters destroy",
+    "up-all": "npm start -- clusters up && npm start -- services up"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vyrwu/provisioner-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vyrwu/provisioner-demo/issues"
+  },
+  "homepage": "https://github.com/vyrwu/provisioner-demo#readme",
+  "dependencies": {
+    "@kubernetes-models/prometheus-operator": "^2.0.2",
+    "@kubernetes/client-node": "^0.16.1",
+    "@pulumi/kubernetes": "^3.12.1",
+    "@pulumi/pulumi": "^3.19.0",
+    "@types/node": "^16.11.12",
+    "ts-node": "^10.4.0"
+  }
+}
