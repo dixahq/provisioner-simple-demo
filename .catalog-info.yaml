@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1beta1
+kind: Component
+metadata:
+  name: provisioner-simple-demo
+  description: A minimal implementation of Pulumi project following the "Provisioner" pattern.
+  annotations:
+    github.com/project-slug: dixahq/provisioner-simple-demo
+  tags:
+    - typescript
+spec:
+  type: library
+  lifecycle: experimental
+  owner: dixahq-sre
